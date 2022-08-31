@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+/* style all body background color */
+body{
+    background-color: lightblue;
+}
+/* main container style */
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.boxes{
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.food{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    border-radius: 8px;
+    width: 400px;
+    height: 250px; 
+    border: 2px solid black;
+    background-color: lightcoral;
+    box-shadow: 0px 0px 25px 16px  #c3b1af;
+    
+}  
+/* Style the main heading*/
+.heading{
+    text-align: center;
+    font-size: 7rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+.food h3{
+    font-size: 2.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    padding: 10px 0px;
+}
+.food p{
+   padding: 20px 10px;
+}
+
+
+/* Start Media Queries */
+
+/* According to desktop size*/
+@media screen and (max-width:992px){
+    .boxes{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+       
+    }
+}
+
+/* According    to tablet size*/
+@media screen and (min-width:768px)and (max-width:991px){
+    .boxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+        gap: 15px;
+    }
+   .food3{
+        grid-row: 2/3;
+        grid-column: 1/3;
+        width: auto;
+    }
+    
+}
+
+/* According to mobile size*/
+@media screen and (max-width:767px){
+    .boxes{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px ;
+    }
+    .food{
+       display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 25px;
+  } 
+  .heading{
+    text-align: center;
+    font-size: 5rem;
+    font-style: italic;
+    margin: 10px;
+    font-weight: bold;
+}  
+}
+/* End media queries */
